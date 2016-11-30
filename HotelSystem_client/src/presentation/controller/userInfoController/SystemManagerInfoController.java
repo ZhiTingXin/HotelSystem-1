@@ -3,7 +3,7 @@ package presentation.controller.userInfoController;
 import VO.SystemManagerVO;
 import blservice.UserInfo_blservice;
 import blservice.impl.UserInfo_bl;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.userInfo_ui.SystemManagerInfoControllerService;
 
 
@@ -13,7 +13,7 @@ public class SystemManagerInfoController implements SystemManagerInfoControllerS
 	public SystemManagerInfoController(){
 		systemManagerInfoService = new UserInfo_bl();
 	}
-	public ResultMessage modifySystemManagerInfo(SystemManagerVO systemManager) {
+	public boolean modifySystemManagerInfo(SystemManagerVO systemManager) {
 		
 		return  systemManagerInfoService.modifySystemManagerInfo(systemManager);
 	}

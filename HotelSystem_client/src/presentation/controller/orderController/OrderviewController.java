@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import VO.OrderVO;
 import other.OrderState;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.order_ui.Order;
 
 public class OrderviewController implements Order {
@@ -28,8 +28,8 @@ public class OrderviewController implements Order {
 		return new OrderVO("0001", "xinzhiting", "hubie", 270, "UNFINISHED");
 	}
 
-	public ResultMessage changeState(OrderVO order_info) {
-		return ResultMessage.FAILED;
+	public boolean changeState(OrderVO order_info) {
+		return false;
 	}
 
 	public ArrayList<OrderVO> getUnfinishedOrders(String userID) {

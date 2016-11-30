@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import PO.OrderPO;
 import PO.PrivilegePO;
 import other.OrderState;
-import other.ResultMessage;
 import other.RoomType;
 
 public interface Order_blservice {
@@ -13,7 +12,7 @@ public interface Order_blservice {
 	public OrderPO getOrder(int orderID);
 	public ArrayList<OrderPO> getOrdersOfUsers(int userID);
 	public OrderPO createOrder(OrderPO order_info);
-	public ResultMessage changeState(OrderPO order_info);
+	public boolean changeState(OrderPO order_info);
 	public ArrayList<OrderPO> getUnfinishedOrders(int userID);
 	public ArrayList<OrderPO> getAbnomalOrders(int userID);
 	public ArrayList<OrderPO> getHotelOrders(int userID,int hotelID);

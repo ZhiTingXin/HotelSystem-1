@@ -19,7 +19,6 @@ public class AdviceFeedBackPO {
     	   this.systemStaffId = staffid;
        }
 
-	
 
 	public String getAdviceFeedBack_content() {
 		return AdviceFeedBack_content;
@@ -28,7 +27,6 @@ public class AdviceFeedBackPO {
 	public void setAdviceFeedBack_content(String adviceFeedBack_content) {
 		AdviceFeedBack_content = adviceFeedBack_content;
 	}
-	
 	public String getAdviceId() {
 		return AdviceId;
 	}

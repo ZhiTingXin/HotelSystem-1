@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import VO.AdviceFeedBackVO;
 import other.AdviceFeedBackState;
-import other.ResultMessage;
 import presentation.controller.adviceFeedBackController.AdviceReplyController;
 import presentation.controller.adviceFeedBackController.AdvicefeedbackController;
 
@@ -18,9 +17,9 @@ public class AdviceFeedbackTest{
 	public void testAddAdvice(){
 		MockAdviceFeedback advice = new MockAdviceFeedback("建议修改网站的某些功能", AdviceFeedBackState.PROCESSED, "15");
 		AdvicefeedbackController con = new AdvicefeedbackController();
-		ResultMessage s = con.addAdviceFeedBack(advice);
+		boolean s = con.addAdviceFeedBack(advice);
 		
-		assertEquals(ResultMessage.SUCCESSFUL,s);
+		assertEquals(true,s);
 	}
 	@Test
 	public void testGetAdvice(){
@@ -34,7 +33,7 @@ public class AdviceFeedbackTest{
 	public void testModifyAdvice(){
 		AdvicefeedbackController con = new AdvicefeedbackController();
 		MockAdviceFeedback advice = new MockAdviceFeedback("建议修改网站的某些功能", AdviceFeedBackState.PROCESSED, "15");
-		assertEquals(ResultMessage.FAILED,con.modifyAdviceFeedBack(advice));
+		assertEquals(false,con.modifyAdviceFeedBack(advice));
 		
 	}
 	@Test
@@ -57,12 +56,12 @@ public class AdviceFeedbackTest{
 	public void testAdd(){
 		AdviceReplyController con = new AdviceReplyController();
 		MockAdviceFeedback ad = new MockAdviceFeedback("网站风格不好",AdviceFeedBackState.PROCESSED,"12");
-		assertEquals(ResultMessage.SUCCESSFUL,con.addAdviceFeedback(ad));
+		assertEquals(true,con.addAdviceFeedback(ad));
 	}
 //	@Test
 //	public void testSetstate(){
 //		AdviceReplyController con = new AdviceReplyController();
 //		String adID= "12";
-//		assertEquals(ResultMessage.SUCCESSFUL,con.setStateOfAdvice(adID));
+//		assertEquals(true,con.setStateOfAdvice(adID));
 //	}
 }

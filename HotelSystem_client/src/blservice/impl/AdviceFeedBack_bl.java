@@ -3,7 +3,6 @@ package blservice.impl;
 import java.util.ArrayList;
 import VO.AdviceFeedBackVO;
 import blservice.AdviceFeedBack_blservice;
-import other.ResultMessage;
 
 public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 
@@ -12,12 +11,11 @@ public class AdviceFeedBack_bl implements AdviceFeedBack_blservice{
 		return null;
 	}
 
-	public ResultMessage addAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean addAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
+		
 	}
 
-	public ResultMessage modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
+	public boolean modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

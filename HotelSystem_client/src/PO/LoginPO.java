@@ -1,8 +1,5 @@
 package PO;
 
-
-
-
 public class LoginPO {
 
 	private String id;
@@ -16,7 +13,6 @@ public class LoginPO {
 		this.id = Id;
 		this.userPassword = password;
 	}
-	
 	public String getId() {
 		return id;
 	}

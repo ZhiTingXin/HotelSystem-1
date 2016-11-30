@@ -2,15 +2,15 @@ package presentation.view.hotel_ui;
 
 import java.util.ArrayList;
 
-import other.ResultMessage;
+import other.boolean;
 import PO.Label;
 import PO.Rank;
 
 public interface HotelAssessmentControllerService {
-	public ResultMessage addAssessment(String hotelID, String assessment);
+	public boolean addAssessment(String hotelID, String assessment);
 
-	public ResultMessage addRankAssessment(String hotelID, Rank rank);
+	public boolean addRankAssessment(String hotelID, Rank rank);
 
-	public ResultMessage addLabelAssessment(String hotelID,
+	public boolean addLabelAssessment(String hotelID,
 			ArrayList<Label> labelList);
 }

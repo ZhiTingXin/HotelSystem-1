@@ -6,7 +6,6 @@ import PO.OrderPO;
 import PO.PrivilegePO;
 import blservice.Order_blservice;
 import other.OrderState;
-import other.ResultMessage;
 import other.RoomType;
 
 public class Order_bl implements Order_blservice{
@@ -30,8 +29,8 @@ public class Order_bl implements Order_blservice{
 		return new OrderPO();
 	}
 
-	public ResultMessage changeState(OrderPO order_info) {
-		return ResultMessage.FAILED;
+	public boolean changeState(OrderPO order_info) {
+		return false;
 	}
 
 	public ArrayList<OrderPO> getUnfinishedOrders(int userID) {

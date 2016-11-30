@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import VO.AdviceFeedBackVO;
 import blservice.AdviceFeedBack_blservice;
 import blservice.impl.AdviceFeedBack_bl;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.adviceFeedBack_ui.AdviceReplyControllerService;
 
 public class AdviceReplyController implements AdviceReplyControllerService{
@@ -25,11 +25,11 @@ public class AdviceReplyController implements AdviceReplyControllerService{
 		return advicefeedbackblservice.getProcessedAdvice(systemstaffId);
 	}
 	
-	public ResultMessage addAdviceFeedback(AdviceFeedBackVO advice){
+	public boolean addAdviceFeedback(AdviceFeedBackVO advice){
 		
 		return advicefeedbackblservice.addAdviceFeedBack(advice);
 	}
-	public ResultMessage update(AdviceFeedBackVO advice) {
+	public boolean update(AdviceFeedBackVO advice) {
 		
 		return advicefeedbackblservice.modifyAdviceFeedBack(advice);
 	}

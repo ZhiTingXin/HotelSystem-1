@@ -11,7 +11,6 @@ import PO.SystemStrategyPO;
 import VO.SystemStrategy1VO;
 import VO.SystemStrategyVO;
 import blservice.SystemStrategy_blservice;
-import other.ResultMessage;
 
 public class SystemStrategy_bl implements SystemStrategy_blservice{
 
@@ -55,14 +54,14 @@ public class SystemStrategy_bl implements SystemStrategy_blservice{
 		return systemstrategyvo1;
 	}
 
-	public ResultMessage deleteSystemStrategy(String systemStrategy_Name) {
+	public boolean deleteSystemStrategy(String systemStrategy_Name) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESSFUL;
+		return true;
 	}
 
-	public ResultMessage modifySystemStrategy(SystemStrategyVO systemstrategyvo) {
+	public boolean modifySystemStrategy(SystemStrategyVO systemstrategyvo) {
 		// TODO Auto-generated method stub
-		return ResultMessage.FAILED;
+		return false;
 	}
 
 	public SystemStrategyVO makeSystemStrategy(SystemStrategyVO systemstrategyvo) {
@@ -95,9 +94,9 @@ public class SystemStrategy_bl implements SystemStrategy_blservice{
 		return systemStrategy1;
 	}
 
-	public ResultMessage modifySystemStrategy1(SystemStrategy1VO systemstrategy) {
+	public boolean modifySystemStrategy1(SystemStrategy1VO systemstrategy) {
 		// TODO Auto-generated method stub
-		return ResultMessage.FAILED;
+		return false;
 	}
 
 }

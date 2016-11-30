@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import VO.HotelStrategyVO;
 import blservice.HotelStrategy_blservice;
-import other.ResultMessage;
+import other.boolean;
 
 public class HotelStrategyController {
 	HotelStrategy_blservice hotelStrategyService;
@@ -13,17 +13,17 @@ public class HotelStrategyController {
 		
 	}
 
-	public ResultMessage makeHotelStrategy(HotelStrategyVO hotelStrategy) {
+	public boolean makeHotelStrategy(HotelStrategyVO hotelStrategy) {
 
 		return null;
 	}
 
-	public ResultMessage modifyHotelStrategy(HotelStrategyVO hotelstrategy) {
+	public boolean modifyHotelStrategy(HotelStrategyVO hotelstrategy) {
 		return null;
 
 	}
 
-	public ResultMessage deleteHotelStrategy(String hotelStrategyId) {
+	public boolean deleteHotelStrategy(String hotelStrategyId) {
 		return null;
 
 	}
@@ -38,7 +38,7 @@ public class HotelStrategyController {
 
 	}
 
-	public ResultMessage showHotelStrategy(HotelStrategyVO hotelStrategy) {
+	public boolean showHotelStrategy(HotelStrategyVO hotelStrategy) {
 		return null;
 	}
 

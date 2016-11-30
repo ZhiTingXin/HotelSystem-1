@@ -9,7 +9,6 @@ import PO.Rank;
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
 import data.service.HotelDataService;
-import other.ResultMessage;
 
 public class Hotel_bl implements Hotel_blservice {
 
@@ -18,7 +17,7 @@ public class Hotel_bl implements Hotel_blservice {
 		return null;
 	}
 
-	public ResultMessage modifyHotelInfo(HotelPO hotelInfo) {
+	public boolean modifyHotelInfo(HotelPO hotelInfo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,22 +37,22 @@ public class Hotel_bl implements Hotel_blservice {
 		return null;
 	}
 
-	public ResultMessage addAssessment(String hotelID, String assessment) {
+	public boolean addAssessment(String hotelID, String assessment) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ResultMessage addLabelAssessment(String hotelID, ArrayList<Label> labelList) {
+	public boolean addLabelAssessment(String hotelID, ArrayList<Label> labelList) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ResultMessage addRankAssessment(String hotelID, Rank rank) {
+	public boolean addRankAssessment(String hotelID, Rank rank) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ResultMessage roomModify(String hotelId, HotelRoomInfoPO currentInfo) {
+	public boolean roomModify(String hotelId, HotelRoomInfoPO currentInfo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -68,7 +67,7 @@ public class Hotel_bl implements Hotel_blservice {
 		return null;
 	}
 
-	public ResultMessage deleteLabelAssessment(String hotelId, Label label) {
+	public boolean deleteLabelAssessment(String hotelId, Label label) {
 		// TODO Auto-generated method stub
 		return null;
 	}

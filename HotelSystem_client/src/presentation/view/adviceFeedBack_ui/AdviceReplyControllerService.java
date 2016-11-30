@@ -3,7 +3,7 @@ package presentation.view.adviceFeedBack_ui;
 import java.util.ArrayList;
 
 import VO.AdviceFeedBackVO;
-import other.ResultMessage;
+import other.boolean;
 
 
 public interface AdviceReplyControllerService {
@@ -12,5 +12,5 @@ public interface AdviceReplyControllerService {
 	
 	public ArrayList<AdviceFeedBackVO> getProcessedAdvice(String systemstaffId);
 	
-	public ResultMessage update(AdviceFeedBackVO advice);
+	public boolean update(AdviceFeedBackVO advice);
 }

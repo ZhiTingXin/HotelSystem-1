@@ -1,6 +1,5 @@
 package PO;
 
-
 public class HotelPO {
     /*
      * hotelId酒店的id
@@ -22,7 +21,7 @@ public class HotelPO {
 		this.hotelName = hotelname;
 	}
 	
-	//属性的get和set方法
+
 	public String getHotelId() {
 		return hotelId;
 	}

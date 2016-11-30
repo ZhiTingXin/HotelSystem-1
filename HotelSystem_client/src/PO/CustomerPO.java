@@ -16,7 +16,6 @@ public class CustomerPO {
 	private Date birthday;
 	
 	public CustomerPO() {
-		super();
 	}
 
 	public CustomerPO(String id, String username, String phone, int credit, int memberGrade) {
@@ -27,7 +26,7 @@ public class CustomerPO {
 		this.credit = credit;
 		this.memberGrade = memberGrade;
 	}
-
+	
 	public String getId() {
 		return id;
 	}

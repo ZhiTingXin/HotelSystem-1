@@ -2,7 +2,7 @@ package presentation.view.hotel_ui;
 
 import java.util.ArrayList;
 
-import other.ResultMessage;
+import other.boolean;
 import VO.HotelInfoVO;
 
 public interface HotelManagementControllerService {
@@ -10,7 +10,7 @@ public interface HotelManagementControllerService {
 
 	public String addHotelStaff(String hotelId);
 
-	public ResultMessage showAvailableHotelList(
+	public boolean showAvailableHotelList(
 			ArrayList<HotelInfoVO> availableHotelList);
 
 	public ArrayList<HotelInfoVO> getAvailableHotelList();

@@ -6,7 +6,7 @@ import VO.SystemStrategy1VO;
 import VO.SystemStrategyVO;
 import blservice.SystemStrategy_blservice;
 import blservice.impl.SystemStrategy_bl;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.systemStrategy_ui.SystemStrategyControllerService;
 import presentation.view.systemStrategy_ui.SystemStrategyView;
 
@@ -31,11 +31,11 @@ public class SystemStrategyController implements  SystemStrategyControllerServic
 		return systemStrategy_blservice.getSystemStrategy(systemStrategy_Name);
 	}
 
-	public ResultMessage deleteSystemStrategy(String systemStrategy_Name) {
+	public boolean deleteSystemStrategy(String systemStrategy_Name) {
 		return systemStrategy_blservice.deleteSystemStrategy(systemStrategy_Name);
 	}
 
-	public ResultMessage modifySystemStrategy(SystemStrategyVO systemStrategy) {
+	public boolean modifySystemStrategy(SystemStrategyVO systemStrategy) {
 		return systemStrategy_blservice.modifySystemStrategy(systemStrategy);
 	}
 
@@ -48,7 +48,7 @@ public class SystemStrategyController implements  SystemStrategyControllerServic
 		return systemStrategy_blservice.makeSystemStrategy1(systemstrategy);
 	}
 
-	public ResultMessage modifySystemStrategy1(SystemStrategy1VO systemstrategy) {
+	public boolean modifySystemStrategy1(SystemStrategy1VO systemstrategy) {
 		// TODO Auto-generated method stub
 		return systemStrategy_blservice.modifySystemStrategy1(systemstrategy);
 	}

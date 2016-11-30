@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import VO.AdviceFeedBackVO;
 import blservice.AdviceFeedBack_blservice;
 import blservice.impl.AdviceFeedBack_bl;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.adviceFeedBack_ui.AdviceFeedBackControllerService;
 
 public class AdvicefeedbackController implements AdviceFeedBackControllerService{
@@ -19,12 +19,12 @@ public class AdvicefeedbackController implements AdviceFeedBackControllerService
 		return advicefeedbackblservice.getAllAdvice(userID);
 	}
 
-	public ResultMessage addAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
+	public boolean addAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
 		// TODO Auto-generated method stub
 		return advicefeedbackblservice.addAdviceFeedBack(advicefeedbackvo);
 	}
 
-	public ResultMessage modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
+	public boolean modifyAdviceFeedBack(AdviceFeedBackVO advicefeedbackvo) {
 		// TODO Auto-generated method stub
 		return advicefeedbackblservice.modifyAdviceFeedBack(advicefeedbackvo);
 	}

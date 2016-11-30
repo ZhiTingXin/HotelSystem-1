@@ -1,12 +1,12 @@
 package presentation.view.hotel_ui;
 
-import other.ResultMessage;
+import other.boolean;
 import VO.HotelRoomInfoVO;
 
 public interface HotelRoomManagementControllerService {
-	public ResultMessage roomModify(String hotelId, HotelRoomInfoVO currentInfo);
+	public boolean roomModify(String hotelId, HotelRoomInfoVO currentInfo);
 
 	public HotelRoomInfoVO getHotelRoomInfo(String hotelId);
 
-	public ResultMessage showHotelRoomInfo(HotelRoomInfoVO currentInfo);
+	public boolean showHotelRoomInfo(HotelRoomInfoVO currentInfo);
 }

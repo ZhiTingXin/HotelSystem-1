@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import VO.SystemStrategy1VO;
 import VO.SystemStrategyVO;
-import other.ResultMessage;
+import other.boolean;
 
 public interface SystemStrategyControllerService {
     
@@ -12,14 +12,14 @@ public interface SystemStrategyControllerService {
 	
 	public SystemStrategyVO getSystemStrategy(String systemStrategy_Name);
 	
-	public ResultMessage modifySystemStrategy(SystemStrategyVO systemStrategy);
+	public boolean modifySystemStrategy(SystemStrategyVO systemStrategy);
 	
-	public ResultMessage deleteSystemStrategy(String systemStrategy_Name);
+	public boolean deleteSystemStrategy(String systemStrategy_Name);
 	
 	public SystemStrategyVO makeSystemStrategy(SystemStrategyVO systemStrategy);
 	
 	public SystemStrategy1VO makeSystemStrategy1(SystemStrategy1VO systemstrategy);
 	
-	public ResultMessage modifySystemStrategy1(SystemStrategy1VO systemstrategy);
+	public boolean modifySystemStrategy1(SystemStrategy1VO systemstrategy);
 	
 }

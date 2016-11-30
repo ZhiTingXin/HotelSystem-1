@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import PO.Label;
 import blservice.Hotel_blservice;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.hotel_ui.AssessmentManagementControllerService;
 
 public class AssessmentManagementController implements AssessmentManagementControllerService{
@@ -15,13 +15,13 @@ public class AssessmentManagementController implements AssessmentManagementContr
 		
 	}
 
-	public ResultMessage showLabelAssessment(ArrayList<Label> labelList) {
-		return ResultMessage.SUCCESSFUL;
+	public boolean showLabelAssessment(ArrayList<Label> labelList) {
+		return true;
 	}
 
-	public ResultMessage deleteLabelAssessment(String hotelID,Label label) {
+	public boolean deleteLabelAssessment(String hotelID,Label label) {
 		this.hotelService.deleteLabelAssessment(hotelID, label);
-		return ResultMessage.SUCCESSFUL;
+		return true;
 	}
 
 }

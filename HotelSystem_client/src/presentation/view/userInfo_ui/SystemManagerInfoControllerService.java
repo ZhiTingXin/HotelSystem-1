@@ -1,11 +1,11 @@
 package presentation.view.userInfo_ui;
 
 import VO.SystemManagerVO;
-import other.ResultMessage;
+import other.boolean;
 
 public interface SystemManagerInfoControllerService {
 
-	public ResultMessage modifySystemManagerInfo(SystemManagerVO systemManager);
+	public boolean modifySystemManagerInfo(SystemManagerVO systemManager);
 	
 	public SystemManagerVO getSystemManagerInfo(String systemManager_Name);
 	//²âÊÔMock´úÂë

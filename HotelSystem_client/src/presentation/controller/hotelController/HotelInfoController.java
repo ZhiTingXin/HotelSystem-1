@@ -1,12 +1,12 @@
 package presentation.controller.hotelController;
 
 import VO.HotelInfoVO;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.hotel_ui.HotelInfoControllerService;
 
 public class HotelInfoController implements HotelInfoControllerService{
 
-	public ResultMessage modifyHotelInfo(HotelInfoVO hotelInfo) {
+	public boolean modifyHotelInfo(HotelInfoVO hotelInfo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -16,7 +16,7 @@ public class HotelInfoController implements HotelInfoControllerService{
 		return null;
 	}
 
-	public ResultMessage showHotelInfo(HotelInfoVO hotelInfo) {
+	public boolean showHotelInfo(HotelInfoVO hotelInfo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

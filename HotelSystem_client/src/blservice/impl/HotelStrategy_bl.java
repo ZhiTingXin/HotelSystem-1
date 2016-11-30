@@ -5,22 +5,21 @@ import java.util.ArrayList;
 import VO.HotelStrategyVO;
 import blservice.HotelStrategy_blservice;
 import data.service.HotelDataService;
-import other.ResultMessage;
 
 public class HotelStrategy_bl implements HotelStrategy_blservice {
 
 	HotelDataService hoteldataservice;
-	public ResultMessage makeHotelStrategy(HotelStrategyVO hotelstrategy) {
+	public boolean makeHotelStrategy(HotelStrategyVO hotelstrategy) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ResultMessage modifyHotelStrategy(HotelStrategyVO hotelstrategy) {
+	public boolean modifyHotelStrategy(HotelStrategyVO hotelstrategy) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ResultMessage deleteHotelStrategy(String hotelStrategyId) {
+	public boolean deleteHotelStrategy(String hotelStrategyId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

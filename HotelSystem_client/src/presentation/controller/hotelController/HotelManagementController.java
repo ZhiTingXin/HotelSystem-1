@@ -3,7 +3,7 @@ package presentation.controller.hotelController;
 import java.util.ArrayList;
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.hotel_ui.HotelManagementControllerService;
 
 public class HotelManagementController implements HotelManagementControllerService{
@@ -19,7 +19,7 @@ public class HotelManagementController implements HotelManagementControllerServi
 		return null;
 	}
 
-	public ResultMessage showAvailableHotelList(ArrayList<HotelInfoVO> availableHotelList) {
+	public boolean showAvailableHotelList(ArrayList<HotelInfoVO> availableHotelList) {
 		// TODO Auto-generated method stub
 		return null;
 	}

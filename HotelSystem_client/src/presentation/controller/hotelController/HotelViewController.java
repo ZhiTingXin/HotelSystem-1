@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import VO.HotelInfoVO;
 import blservice.Hotel_blservice;
-import other.ResultMessage;
+import other.boolean;
 import other.SortMethod;
 import presentation.view.hotel_ui.HotelViewControllerService;
 
@@ -16,8 +16,8 @@ public class HotelViewController implements HotelViewControllerService{
 		return vo;
 	}
 
-	public ResultMessage showHotelInfo(HotelInfoVO HotelInfo) {
-		return ResultMessage.SUCCESSFUL;
+	public boolean showHotelInfo(HotelInfoVO HotelInfo) {
+		return true;
 	}
 
 	public String[] getListOfHotelId() {
@@ -33,8 +33,8 @@ public class HotelViewController implements HotelViewControllerService{
 		return voList;
 	}
 
-	public ResultMessage showHotelList(ArrayList<HotelInfoVO> list) {
-		return ResultMessage.SUCCESSFUL;
+	public boolean showHotelList(ArrayList<HotelInfoVO> list) {
+		return true;
 
 	}
 
@@ -48,8 +48,8 @@ public class HotelViewController implements HotelViewControllerService{
 		return this.hotelService.getListOfHotelPrefer(userId);
 	}
 
-	public ResultMessage bookRoom(String hotelID) {
+	public boolean bookRoom(String hotelID) {
 		
-		return ResultMessage.SUCCESSFUL;
+		return true;
 	}
 }

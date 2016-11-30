@@ -5,27 +5,27 @@ import java.util.ArrayList;
 import PO.Label;
 import PO.Rank;
 import blservice.Hotel_blservice;
-import other.ResultMessage;
+import other.boolean;
 import presentation.view.hotel_ui.HotelAssessmentControllerService;
 
 public class HotelAssessmentController implements HotelAssessmentControllerService{
 	Hotel_blservice hotelService;
 
-	public ResultMessage addAssessment(String hotelID, String assessment) {
+	public boolean addAssessment(String hotelID, String assessment) {
 		this.hotelService.addAssessment(hotelID, assessment);
-		return ResultMessage.SUCCESSFUL;
+		return true;
 
 	}
 
-	public ResultMessage addRankAssessment(String hotelID, Rank rank) {
+	public boolean addRankAssessment(String hotelID, Rank rank) {
 		this.hotelService.addRankAssessment(hotelID, rank);
-		return ResultMessage.SUCCESSFUL;
+		return true;
 	}
 
-	public ResultMessage addLabelAssessment(String hotelID,
+	public boolean addLabelAssessment(String hotelID,
 			ArrayList<Label> labelList) {
 		this.hotelService.addLabelAssessment(hotelID, labelList);
-		return ResultMessage.SUCCESSFUL;
+		return true;
 	}
 	
 }

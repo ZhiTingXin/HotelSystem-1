@@ -4,8 +4,6 @@ import VO.CustemorInfoChangeVO;
 import VO.CustomerVO;
 import VO.SystemManagerVO;
 import blservice.UserInfo_blservice;
-import other.ResultMessage;
-
 
 public class UserInfo_bl implements UserInfo_blservice{
 
@@ -15,17 +13,17 @@ public class UserInfo_bl implements UserInfo_blservice{
 		return null;
 	}
 
-	public ResultMessage modifySystemManagerInfo(SystemManagerVO systemManager) {
+	public boolean modifySystemManagerInfo(SystemManagerVO systemManager) {
 		
 		return null;
 	}
 
-	public ResultMessage CustomerinfoModify(CustomerVO Customer, CustemorInfoChangeVO VO) {
-		return ResultMessage.FAILED;
+	public boolean CustomerinfoModify(CustomerVO Customer, CustemorInfoChangeVO VO) {
+		return false;
 	}
 
-	public ResultMessage CustomerinfoShow(CustomerVO Customer) {
-		return ResultMessage.FAILED;
+	public boolean CustomerinfoShow(CustomerVO Customer) {
+		return false;
 	}
 //≤‚ ‘Mock ¥˙¬Î
 	public void add(SystemManagerVO manager) {
