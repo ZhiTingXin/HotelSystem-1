@@ -47,31 +47,31 @@ public class HotelRoomInfoVO {
 		this.roomPrice = roomPrice;
 	}
 
-	public StringProperty getRoomNumProperty() {
-		return new SimpleStringProperty(String.valueOf(roomNum));
-	}
-
-	public StringProperty getRoomRemainProperty() {
-		return new SimpleStringProperty(String.valueOf(roomRemain));
-	}
-
-	public StringProperty getRoomPriceProperty() {
-		return new SimpleStringProperty(String.valueOf(roomPrice));
-	}
-
-	public StringProperty getRoomTypeProperty() {
-		if (this.roomType == RoomType.doublePersonRoom) {
-			return new SimpleStringProperty("双人间");
-		}
-		if (this.roomType == RoomType.bigBedRoom) {
-			return new SimpleStringProperty("大床房");
-		}
-		if (this.roomType == RoomType.singlePersonRoom) {
-			return new SimpleStringProperty("单人间");
-		}
-		if (this.roomType == RoomType.multiPersonRoom) {
-			return new SimpleStringProperty("多人间");
-		} else
-			return null;
-	}
+//	public StringProperty getRoomNumProperty() {
+//		return new SimpleStringProperty(String.valueOf(roomNum));
+//	}
+//
+//	public StringProperty getRoomRemainProperty() {
+//		return new SimpleStringProperty(String.valueOf(roomRemain));
+//	}
+//
+//	public StringProperty getRoomPriceProperty() {
+//		return new SimpleStringProperty(String.valueOf(roomPrice));
+//	}
+//
+//	public StringProperty getRoomTypeProperty() {
+//		if (this.roomType == RoomType.doublePersonRoom) {
+//			return new SimpleStringProperty("双人间");
+//		}
+//		if (this.roomType == RoomType.bigBedRoom) {
+//			return new SimpleStringProperty("大床房");
+//		}
+//		if (this.roomType == RoomType.singlePersonRoom) {
+//			return new SimpleStringProperty("单人间");
+//		}
+//		if (this.roomType == RoomType.multiPersonRoom) {
+//			return new SimpleStringProperty("多人间");
+//		} else
+//			return null;
+//	}
 }
