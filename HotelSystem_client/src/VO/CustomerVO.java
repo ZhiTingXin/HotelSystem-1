@@ -21,16 +21,16 @@ public class CustomerVO {
 	private int memberGrade;
 	private memberState memberState;
 
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	public CustomerVO() {
-		this.id = "123456";
-		this.birthday = new Date(95, 11, 19);
-		this.companyName = "NJU";
-		this.credit = 100;
-		this.userName = "William";
-		this.password = "William123456";
-		this.memberGrade = 1;
-		this.memberState = memberState.NORMAL_MEMBER;
+//		this.id = "123456";
+//		this.birthday = new Date(95, 11, 19);
+//		this.companyName = "NJU";
+//		this.credit = 100;
+//		this.userName = "William";
+//		this.password = "William123456";
+//		this.memberGrade = 1;
+//		this.memberState = memberState.NORMAL_MEMBER;
 	}
 
 	public CustomerVO(CustomerPO userPO) {
