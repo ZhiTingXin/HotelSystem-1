@@ -9,26 +9,25 @@ public class HotelStaffPO {
 
 	private String phone;
 	
-	private String hotelName;
+	private String hotelId;
 
 
 	public HotelStaffPO() {
-		super();
+	}
+	
+	public HotelStaffPO(HotelStaffVO hotelStaffVO){
+		this.hotelId = hotelStaffVO.getHotelId();
+		this.username = hotelStaffVO.getUsername();
+		this.phone = hotelStaffVO.getPhone();
+		this.id = hotelStaffVO.getId();
 	}
 
-	public HotelStaffPO(String id, String username, String phone, String hotelName) {
+	public HotelStaffPO(String id, String username, String phone, String hotelId) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.phone = phone;
-		this.hotelName = hotelName;
-	}
-	
-	
-	public HotelStaffPO(HotelStaffVO hotelStaff) {
-		id = hotelStaff.getId();
-		username = hotelStaff.getHotelName();
-		hotelName = hotelStaff.getHotelName();
+		this.hotelId = hotelId;
 	}
 
 	public String getId() {
@@ -56,11 +55,11 @@ public class HotelStaffPO {
 	}
 
 	public String getHotelName() {
-		return hotelName;
+		return hotelId;
 	}
 
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
+	public void setHotelName(String hotelId) {
+		this.hotelId = hotelId;
 	}
 
 }
