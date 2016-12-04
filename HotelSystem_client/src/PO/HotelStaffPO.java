@@ -1,5 +1,7 @@
 package PO;
 
+import VO.HotelStaffVO;
+
 public class HotelStaffPO {
 	private String id;
 
@@ -20,6 +22,13 @@ public class HotelStaffPO {
 		this.username = username;
 		this.phone = phone;
 		this.hotelName = hotelName;
+	}
+	
+	
+	public HotelStaffPO(HotelStaffVO hotelStaff) {
+		id = hotelStaff.getId();
+		username = hotelStaff.getHotelName();
+		hotelName = hotelStaff.getHotelName();
 	}
 
 	public String getId() {

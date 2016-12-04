@@ -2,7 +2,7 @@ package VO;
 
 import java.util.ArrayList;
 
-import PO.HotelInfoPO;
+import PO.HotelPO;
 import PO.HotelStrategyPO;
 import PO.Label;
 import PO.Rank;
@@ -25,77 +25,77 @@ public class HotelInfoVO {
 	ArrayList<Label> labelList;
 	String[] orderListId;
 
-	public HotelInfoVO() {
-		super();
-		this.hotelID = "500001";
-		this.hotelName = "Nanjing Hotel";
-		this.hotelDistrict = "新街口商圈";
-		this.hotelStaffId = "200001";
-		this.hotelAddress = "上海路63号";
-		this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
-		this.roomInfo = new HotelRoomInfoVO[4];
-		roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-		roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-		roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-		roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-
-	}
-
-	public HotelInfoVO(String hotelID) {
-		super();
-		if (hotelID == "500001") {
-			this.hotelID = "500001";
-			this.hotelName = "Nanjing Hotel";
-			this.hotelDistrict = "新街口商圈";
-			this.hotelStaffId = "200001";
-			this.hotelAddress = "上海路63号";
-			this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
-			this.roomInfo = new HotelRoomInfoVO[4];
-			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-		}
-		if (hotelID == "500002") {
-			this.hotelID = "500002";
-			this.hotelName = "Hamoney Hotel";
-			this.hotelDistrict = "新街口商圈";
-			this.hotelStaffId = "200002";
-			this.hotelAddress = "汉口路199号";
-			this.hotelDiscription = "welcome！";
-			this.roomInfo = new HotelRoomInfoVO[4];
-			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-		}
-		if (hotelID == "500003") {
-			this.hotelID = "500003";
-			this.hotelName = "NEW YOUNG HOTEL";
-			this.hotelDistrict = "新街口商圈";
-			this.hotelStaffId = "200003";
-			this.hotelAddress = "北京东路111号";
-			this.hotelDiscription = "豪华套房只为年轻的你服务！";
-			this.roomInfo = new HotelRoomInfoVO[4];
-			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-		}
-		if (hotelID == "500004") {
-			this.hotelID = "500004";
-			this.hotelName = "8090Hotel";
-			this.hotelDistrict = "新街口商圈";
-			this.hotelStaffId = "200004";
-			this.hotelAddress = "珠江路73号";
-			this.hotelDiscription = "约不约？！";
-			this.roomInfo = new HotelRoomInfoVO[4];
-			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-		}
-	}
+//	public HotelInfoVO() {
+//		super();
+//		this.hotelID = "500001";
+//		this.hotelName = "Nanjing Hotel";
+//		this.hotelDistrict = "新街口商圈";
+//		this.hotelStaffId = "200001";
+//		this.hotelAddress = "上海路63号";
+//		this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
+//		this.roomInfo = new HotelRoomInfoVO[4];
+//		roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+//		roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+//		roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+//		roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+//
+//	}
+//
+//	public HotelInfoVO(String hotelID) {
+//		super();
+//		if (hotelID == "500001") {
+//			this.hotelID = "500001";
+//			this.hotelName = "Nanjing Hotel";
+//			this.hotelDistrict = "新街口商圈";
+//			this.hotelStaffId = "200001";
+//			this.hotelAddress = "上海路63号";
+//			this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
+//			this.roomInfo = new HotelRoomInfoVO[4];
+//			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+//			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+//			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+//			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+//		}
+//		if (hotelID == "500002") {
+//			this.hotelID = "500002";
+//			this.hotelName = "Hamoney Hotel";
+//			this.hotelDistrict = "新街口商圈";
+//			this.hotelStaffId = "200002";
+//			this.hotelAddress = "汉口路199号";
+//			this.hotelDiscription = "welcome！";
+//			this.roomInfo = new HotelRoomInfoVO[4];
+//			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+//			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+//			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+//			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+//		}
+//		if (hotelID == "500003") {
+//			this.hotelID = "500003";
+//			this.hotelName = "NEW YOUNG HOTEL";
+//			this.hotelDistrict = "新街口商圈";
+//			this.hotelStaffId = "200003";
+//			this.hotelAddress = "北京东路111号";
+//			this.hotelDiscription = "豪华套房只为年轻的你服务！";
+//			this.roomInfo = new HotelRoomInfoVO[4];
+//			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+//			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+//			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+//			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+//		}
+//		if (hotelID == "500004") {
+//			this.hotelID = "500004";
+//			this.hotelName = "8090Hotel";
+//			this.hotelDistrict = "新街口商圈";
+//			this.hotelStaffId = "200004";
+//			this.hotelAddress = "珠江路73号";
+//			this.hotelDiscription = "约不约？！";
+//			this.roomInfo = new HotelRoomInfoVO[4];
+//			roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+//			roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+//			roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+//			roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+//		}
+//	}
 
 	public HotelInfoVO(String ID, String Name, String Address, String Discription) {
 		this.hotelName = Name;
@@ -105,7 +105,9 @@ public class HotelInfoVO {
 	}
 
 	// 构造方法
-	public HotelInfoVO(HotelInfoPO hotelInfo) {
+	
+	//*********used
+	public HotelInfoVO(HotelPO hotelInfo) {
 		// TODO Auto-generated constructor stub
 	}
 

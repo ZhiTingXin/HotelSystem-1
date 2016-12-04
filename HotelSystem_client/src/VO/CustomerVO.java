@@ -33,13 +33,13 @@ public class CustomerVO {
 		this.memberState = memberState.NORMAL_MEMBER;
 	}
 
-	public CustomerVO(CustomerPO userPO) {
+	public CustomerVO(CustomerPO customerPO) {
 		super();
-		this.id = userPO.getId();
-		this.userName = userPO.getUserName();
-		this.credit = userPO.getCredit();
-		this.birthday = userPO.getBirthday();
-		this.memberGrade = userPO.getMemberGrade();
+		this.id = customerPO.getId();
+		this.userName = customerPO.getUserName();
+		this.credit = customerPO.getCredit();
+		this.birthday = customerPO.getBirthday();
+		this.memberGrade = customerPO.getMemberGrade();
 	}
 
 	public CustomerVO(String id, String userName, int credit) {

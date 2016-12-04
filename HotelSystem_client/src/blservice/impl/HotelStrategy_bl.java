@@ -2,16 +2,18 @@ package blservice.impl;
 
 import java.util.ArrayList;
 
+import PO.HotelStrategyPO;
+import RMI.RemoteHelper;
 import VO.HotelStrategyVO;
 import blservice.HotelStrategy_blservice;
 import data.service.HotelDataService;
 
 public class HotelStrategy_bl implements HotelStrategy_blservice {
-
+	HotelDataService dataService = RemoteHelper.getInstance().getHotelDataService();
+	
 	HotelDataService hoteldataservice;
 	public boolean makeHotelStrategy(HotelStrategyVO hotelstrategy) {
-		// TODO Auto-generated method stub
-		return null;
+		HotelStrategyPO strategyPO = new HotelStrategyPO(hotelstrategy);
 	}
 
 	public boolean modifyHotelStrategy(HotelStrategyVO hotelstrategy) {

@@ -11,13 +11,13 @@ public class HotelStaffVO {
 
 	private String password;
 
-	public HotelStaffVO() {
-		this.id = "200001";
-		this.username = "Ken";
-		this.hotelId = "500001";
-		this.hotelName = "Nanjing Hotel";
-		this.password = "Ken200001";
-	}
+//	public HotelStaffVO() {
+//		this.id = "200001";
+//		this.username = "Ken";
+//		this.hotelId = "500001";
+//		this.hotelName = "Nanjing Hotel";
+//		this.password = "Ken200001";
+//	}
 
 	public HotelStaffVO(HotelStaffPO userPO) {
 		super();
@@ -25,7 +25,11 @@ public class HotelStaffVO {
 		this.username = userPO.getUsername();
 		this.hotelName = userPO.getHotelName();
 	}
-
+	
+	public HotelStaffVO(String username, String hotelid, String password){
+		
+	}
+	
 	public String getId() {
 		return id;
 	}

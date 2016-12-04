@@ -14,16 +14,14 @@ public class AdviceFeedBackPO {
        private String AdviceFeedBack_content;
        private String AdviceId;
        private String userId;
-       private String systemStaffId;
        
        public AdviceFeedBackPO(){}
        
-       public AdviceFeedBackPO(AdviceFeedBackState state1,String adviceFeedBack_content,String userid,String staffid){
+       public AdviceFeedBackPO(AdviceFeedBackState state1,String adviceFeedBack_content,String userid){
     	   super();
     	   this.AdviceFeedBack_content = adviceFeedBack_content;
     	   this.state = state1;
     	   this.userId = userid;
-    	   this.systemStaffId = staffid;
        }
 
 
@@ -49,14 +47,6 @@ public class AdviceFeedBackPO {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
-	}
-
-	public String getSystemStaffId() {
-		return systemStaffId;
-	}
-
-	public void setSystemStaffId(String systemStaffId) {
-		this.systemStaffId = systemStaffId;
 	}
 
 	public AdviceFeedBackState getState() {
