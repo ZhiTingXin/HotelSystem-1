@@ -1,5 +1,7 @@
 package PO;
 
+import VO.HotelInfoVO;
+
 public class HotelPO {
     /*
      * hotelId酒店的id
@@ -13,6 +15,13 @@ public class HotelPO {
 	
 	//Hotel的构造方法
 	public HotelPO(){}
+	
+	public HotelPO(HotelInfoVO hotelInfoVO){
+		this.hotelId = hotelInfoVO.getHotelID();
+		this.hotelStaffId = hotelInfoVO.getHotelStaffId();
+		this.hotelStrict = hotelInfoVO.getHotelDistrict();
+		this.hotelName = hotelInfoVO.getHotelName();
+	}
 	public HotelPO(String hid,String hsid,String hstri,String hotelname){
 		super();
 		this.hotelId = hid;

@@ -19,7 +19,10 @@ public class CustomerVO {
 	private String companyName;
 
 	private int memberGrade;
+	
 	private memberState memberState;
+	
+	private String phonenumber;
 
 //	@SuppressWarnings("deprecation")
 	public CustomerVO() {
@@ -48,6 +51,9 @@ public class CustomerVO {
 		this.userName = userName;
 		this.credit = credit;
 
+	}
+	public String getPhoneNum(){
+		return phonenumber;
 	}
 
 	public String getId() {

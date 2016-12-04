@@ -8,7 +8,7 @@ public class HotelStaffVO {
 	private String username;
 	private String hotelId;
 	private String hotelName;
-
+    private String phone;
 	private String password;
 
 	public HotelStaffVO() {
@@ -26,6 +26,9 @@ public class HotelStaffVO {
 		this.hotelName = userPO.getHotelName();
 	}
 
+	public String getPhone(){
+		return phone;
+	}
 	public String getId() {
 		return id;
 	}
