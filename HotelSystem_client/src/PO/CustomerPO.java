@@ -2,11 +2,12 @@ package PO;
 
 import java.util.Date;
 
+import VO.CustomerVO;
+
 public class CustomerPO {
 	private String id;
-
+	
 	private String userName;
-
 	private String phone;
 
 	private int credit;
@@ -18,13 +19,22 @@ public class CustomerPO {
 	public CustomerPO() {
 	}
 
-	public CustomerPO(String id, String username, String phone, int credit, int memberGrade) {
+	public CustomerPO(CustomerVO customerVO){
+		this.birthday = customerVO.getBirthday();
+		this.id = customerVO.getId();
+		this.userName = customerVO.getUsername();
+		this.phone = customerVO.getPhoneNum();
+		this.credit = customerVO.getCredit();
+		this.memberGrade = customerVO.getMemberGrade();
+	}
+	public CustomerPO(String id, String username, String phone, int credit, int memberGrade,Date birthday) {
 		super();
 		this.id = id;
 		this.userName = username;
 		this.phone = phone;
 		this.credit = credit;
 		this.memberGrade = memberGrade;
+		this.birthday = birthday;
 	}
 	
 	public String getId() {

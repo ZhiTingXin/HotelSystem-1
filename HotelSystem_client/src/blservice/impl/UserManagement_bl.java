@@ -1,53 +1,127 @@
 package blservice.impl;
 
-import java.util.ArrayList;
+import PO.CustomerPO;
+import PO.HotelPO;
+import PO.HotelStaffPO;
+import PO.SystemManagerPO;
+import PO.SystemStaffPO;
+import RMI.RemoteHelper;
 import VO.CustomerVO;
+import VO.HotelInfoVO;
 import VO.HotelStaffVO;
+import VO.SystemManagerVO;
 import VO.SystemStaffVO;
 import blservice.UserManagement_blservice;
 
 public class UserManagement_bl implements UserManagement_blservice {
 
-	public ArrayList<CustomerVO> getCustomer(String user_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public CustomerVO getCustomer(String customerId) {
+		CustomerVO customerVO = null;
+		try {
+			CustomerPO customerPO = RemoteHelper.getInstance().getCustomerDataService().findCustomer(customerId);
+			customerVO = new CustomerVO(customerPO);
+			return customerVO;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return customerVO;
+		}
 	}
 
-	public boolean modifyCustomerManagement(CustomerVO customer, CustomerVO customerChange) {
-		// TODO Auto-generated method stub
-		return false;
+	public HotelStaffVO getHotelStaff(String hotelStaffId) {
+		HotelStaffVO hotelStaffVO = null;
+		try {
+			HotelStaffPO hotelStaffPO = RemoteHelper.getInstance().getHotelStaffDataService().findStaff(hotelStaffId);
+			hotelStaffVO = new HotelStaffVO(hotelStaffPO);
+			return hotelStaffVO;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return hotelStaffVO;
+		}
+		
 	}
 
-	public ArrayList<HotelStaffVO> getHotelStaffManagement(String hotelstaff_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public SystemStaffVO getSystemStaff(String systemStaffId) {
+		SystemStaffVO staffVO = null;
+		try {
+			SystemStaffPO staffPO = RemoteHelper.getInstance().getSystemStaffDataService().findStaff(systemStaffId);
+			staffVO = new SystemStaffVO(staffPO);
+			return staffVO;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return staffVO;
+		}
 	}
 
-	public boolean modifyHotelStaffManagement(HotelStaffVO hotelstaff, HotelStaffVO hotelstaffChange) {
-		// TODO Auto-generated method stub
-		return false;
+	public SystemManagerVO getSystemManager(String systemManagerId) {
+		SystemManagerVO systemManagerVO = null;
+		try {
+			SystemManagerPO systemManagerPO = RemoteHelper.getInstance().getSystemManagerDataService()
+					.findManager(systemManagerId);
+			systemManagerVO = new SystemManagerVO(systemManagerPO);
+			return systemManagerVO;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return systemManagerVO;
+		}
 	}
 
-	public ArrayList<SystemStaffVO> getSystemStaff(String systemstaff_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean modifyCustomer(CustomerVO customerVO) {
+		try {
+			CustomerPO customerPO = new  CustomerPO(customerVO);
+			return RemoteHelper.getInstance().getCustomerDataService().updateCustomer(customerPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	public boolean modifySystemStaffManagement(SystemStaffVO systemstaff, SystemStaffVO systemStaffChange) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean modifyHotelStaff(HotelStaffVO hotelStaffVO) {
+		try {
+			HotelStaffPO hotelStaffPO = new HotelStaffPO(hotelStaffVO);
+			return RemoteHelper.getInstance().getHotelStaffDataService().updateStaff(hotelStaffPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	public boolean addNewHotel(String hotel_id) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean modifySystemStaff(SystemStaffVO systemStaffVO) {
+		try {
+			SystemStaffPO systemStaffPO = new SystemStaffPO(systemStaffVO);
+			return RemoteHelper.getInstance().getSystemStaffDataService().updateStaff(systemStaffPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	public boolean addHotelStaff(String hotel_id, HotelStaffVO hotelstaff) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean addSystemStaff(SystemStaffVO staffVO) {
+		try {
+		     SystemStaffPO staffPO = new SystemStaffPO(staffVO);
+		     return RemoteHelper.getInstance().getSystemStaffDataService().addStaff(staffPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
-	
+	public boolean addHotel(HotelInfoVO hotelInfoVO) {
+		try {
+			HotelPO hotelPO = new HotelPO(hotelInfoVO);
+			return RemoteHelper.getInstance().getHotelDataService().add(hotelPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
+	public boolean addHotelStaff(HotelStaffVO hotelStaffVO) {
+		try {
+			HotelStaffPO hotelStaffPO = new HotelStaffPO(hotelStaffVO);
+			return RemoteHelper.getInstance().getHotelStaffDataService().addStaff(hotelStaffPO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

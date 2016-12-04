@@ -22,16 +22,15 @@ public class SystemStrategyVO {
      private String systemStaffID;
      
      public SystemStrategyVO(){
-    	 super();
      }
      
-     public SystemStrategyVO(SystemStrategyPO systemstrategypo,SystemStaffPO systemstaffpo){
+     public SystemStrategyVO(SystemStrategyPO systemstrategypo){
     	 super();
     	 this.systemStrategy_name = systemstrategypo.getSystemStrategy_name();
     	 this.discount = systemstrategypo.getDiscount();
     	 this.begin_date = systemstrategypo.getBegin_date();
     	 this.end_date = systemstrategypo.getEnd_date();
-    	 this.systemStaffID = systemstaffpo.getId();
+    	 this.systemStaffID = systemstrategypo.getSystemStaffId();
      }
      
      public String getStrategy_name(){

@@ -2,21 +2,31 @@ package PO;
 
 import java.util.Date;
 
+import VO.SystemStrategyVO;
+
 public class SystemStrategyPO {
 
 	private String systemStrategy_name;
+	private String systemStaffId;
     private double discount;
     private Date begin_date;
     private Date end_date;
     
     public SystemStrategyPO(){
-    	super();
     }
-    public SystemStrategyPO(String systemstrategy_name,double count,Date begin,Date end){
+    public SystemStrategyPO(SystemStrategyVO systemStrategyVO){
+    	this.systemStrategy_name = systemStrategyVO.getStrategy_name();
+    	this.systemStaffId = systemStrategyVO.getSystemStaffID();
+    	this.discount = systemStrategyVO.getDiscount();
+    	this.begin_date = systemStrategyVO.getBegin_Date();
+    	this.end_date = systemStrategyVO.getEnd_date();
+    }
+    public SystemStrategyPO(String systemstrategy_name,double count,Date begin,Date end,String systemStaffID){
     	this.systemStrategy_name=systemstrategy_name;
     	this.discount = count;
     	this.begin_date = begin;
     	this.end_date =end;
+    	this.systemStaffId = systemStaffID;
     }
     
 	public String getSystemStrategy_name() {
@@ -49,6 +59,12 @@ public class SystemStrategyPO {
 	
 	public void setEnd_date(Date end_date) {
 		this.end_date = end_date;
+	}
+	public String getSystemStaffId() {
+		return systemStaffId;
+	}
+	public void setSystemStaffId(String systemStaffId) {
+		this.systemStaffId = systemStaffId;
 	}
 
 }

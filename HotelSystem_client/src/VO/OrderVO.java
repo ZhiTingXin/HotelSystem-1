@@ -154,30 +154,30 @@ public class OrderVO {
 //		}
 //
 //	}
-
-	// 表格服务方法
-	public StringProperty getOrderIDProperty() {
-		return new SimpleStringProperty(this.orderID);
-	}
-
-	public StringProperty getPriceProperty() {
-		return new SimpleStringProperty(String.valueOf(this.price));
-	}
-
-	public StringProperty getOrderStateProperty() {
-		if (this.orderState.equals(OrderState.ABNOMAL)) {
-			return new SimpleStringProperty("异常");
-		}
-		if (this.orderState.equals(OrderState.FINISHED)) {
-			return new SimpleStringProperty("已执行");
-		}
-		if (this.orderState.equals(OrderState.UNFINISHED)) {
-			return new SimpleStringProperty("待执行");
-		}
-		return null;
-	}
-
-	public StringProperty getEntryTimeProperty() {
-		return new SimpleStringProperty(this.entryTime.toString());
-	}
+//
+//	// 表格服务方法
+//	public StringProperty getOrderIDProperty() {
+//		return new SimpleStringProperty(this.orderID);
+//	}
+//
+//	public StringProperty getPriceProperty() {
+//		return new SimpleStringProperty(String.valueOf(this.price));
+//	}
+//
+//	public StringProperty getOrderStateProperty() {
+//		if (this.orderState.equals(OrderState.ABNOMAL)) {
+//			return new SimpleStringProperty("异常");
+//		}
+//		if (this.orderState.equals(OrderState.FINISHED)) {
+//			return new SimpleStringProperty("已执行");
+//		}
+//		if (this.orderState.equals(OrderState.UNFINISHED)) {
+//			return new SimpleStringProperty("待执行");
+//		}
+//		return null;
+//	}
+//
+//	public StringProperty getEntryTimeProperty() {
+//		return new SimpleStringProperty(this.entryTime.toString());
+//	}
 }

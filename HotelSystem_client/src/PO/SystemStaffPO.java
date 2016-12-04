@@ -1,5 +1,7 @@
 package PO;
 
+import VO.SystemStaffVO;
+
 public class SystemStaffPO {
 	private String id;
 
@@ -10,10 +12,17 @@ public class SystemStaffPO {
 	private String businessDistrict;
 
 	public SystemStaffPO() {
-		super();
 	}
 
+	public SystemStaffPO(SystemStaffVO systemStaffVO){
+		super();
+		this.id = systemStaffVO.getId();
+		this.staffName = systemStaffVO.getUsername();
+		this.phone = systemStaffVO.getPhone();
+		this.businessDistrict = systemStaffVO.getBusinessDistrict();
+	}
 	public SystemStaffPO(String id, String staffName, String phone) {
+		super();
 		this.id = id;
 		this.staffName = staffName;
 		this.phone = phone;

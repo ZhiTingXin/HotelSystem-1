@@ -18,6 +18,6 @@ public interface Order_blservice {
 //	public boolean checkRoomType(String hotelID, RoomType type);
 //	public ArrayList<PrivilegePO> getRecommendations(String userID, String hotelID);
 	public boolean generateOrder(OrderVO aOrder);
-	public  boolean changeState(String orderID);
+//	public  boolean changeState(String orderID);
 	public boolean changeCredit(String userID,String orderID);
 }
