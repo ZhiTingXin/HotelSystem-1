@@ -1,11 +1,11 @@
 package VO;
 
-import java.sql.Date;
-
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import java.util.Date;
+import PO.OrderPO;
+//import javafx.beans.property.DoubleProperty;
+//import javafx.beans.property.SimpleDoubleProperty;
+//import javafx.beans.property.SimpleStringProperty;
+//import javafx.beans.property.StringProperty;
 import other.OrderState;
 import other.RoomType;
 
@@ -31,7 +31,7 @@ public class OrderVO {
 		return entryTime;
 	}
 
-	public int getLastime() {
+	public java.util.Date getLastime() {
 		return lastime;
 	}
 
@@ -64,8 +64,8 @@ public class OrderVO {
 	private String hotelID;
 	private double price;
 	private double originalPrice;
-	private Date entryTime;
-	private int lastime;
+	private java.util.Date entryTime;
+	private java.util.Date lastime;
 	private OrderState orderState;
 
 	private RoomType roomType;
@@ -79,7 +79,7 @@ public class OrderVO {
 		this.orderState = orderState;
 	}
 
-	public OrderVO(String orderID, String userID, String hotelID, double price, Date entryTime, int lastime,
+	public OrderVO(String orderID, String userID, String hotelID, double price, Date entryTime, Date lastime,
 			OrderState orderState) {
 		this.orderID = orderID;
 		this.userID = userID;
@@ -90,80 +90,92 @@ public class OrderVO {
 		this.orderState = orderState;
 	}
 
-	public OrderVO(String id) {
-		if (id == "123456001") {
-			this.orderID = id;
-			this.userID = "123456";
-			this.hotelID = "500001";
-			this.price = 198;
-			// this.entryTime = "2016/11/24";
-			this.lastime = 15;
-			this.orderState = OrderState.UNFINISHED;
-			this.roomType = RoomType.bigBedRoom;
-			this.roomNum = 1;
-		}
-		if (id == "123456002") {
-			this.orderID = id;
-			this.userID = "123456";
-			this.hotelID = "500002";
-			this.price = 198;
-			// this.entryTime = "2016/9/28";
-			this.lastime = 5;
-			this.orderState = OrderState.FINISHED;
-			this.roomType = RoomType.doublePersonRoom;
-			this.roomNum = 1;
-
-		}
-		if (id == "123456003") {
-			this.orderID = id;
-			this.userID = "123456";
-			this.hotelID = "500003";
-			this.price = 198;
-			// this.entryTime = "2016/12/28";
-			this.lastime = 2;
-			this.orderState = OrderState.UNFINISHED;
-			this.roomType = RoomType.singlePersonRoom;
-			this.roomNum = 1;
-
-		}
-		if (id == "123456004") {
-			this.orderID = id;
-			this.userID = "123456";
-			this.hotelID = "500004";
-			this.price = 198;
-			// this.entryTime = "2016/7/13";
-			this.lastime = 2;
-			this.orderState = OrderState.ABNOMAL;
-			this.roomType = RoomType.multiPersonRoom;
-			this.roomNum = 1;
-
-		}
-
+	//structure method po > vo
+	public OrderVO(OrderPO orderPO){
+		orderID = orderPO.getId();
+		userID = orderPO.getUserId();
+		hotelID = orderPO.getHotelId();
+		price = orderPO.getPrice();
+		entryTime = orderPO.getEntryTime();
+		lastime  = orderPO.getLastTime();
+		orderState = orderPO.getStatus();
 	}
+	
+	
+//	public OrderVO(String id) {
+//		if (id == "123456001") {
+//			this.orderID = id;
+//			this.userID = "123456";
+//			this.hotelID = "500001";
+//			this.price = 198;
+//			// this.entryTime = "2016/11/24";
+//			this.lastime = 15;
+//			this.orderState = OrderState.UNFINISHED;
+//			this.roomType = RoomType.bigBedRoom;
+//			this.roomNum = 1;
+//		}
+//		if (id == "123456002") {
+//			this.orderID = id;
+//			this.userID = "123456";
+//			this.hotelID = "500002";
+//			this.price = 198;
+//			// this.entryTime = "2016/9/28";
+//			this.lastime = 5;
+//			this.orderState = OrderState.FINISHED;
+//			this.roomType = RoomType.doublePersonRoom;
+//			this.roomNum = 1;
+//
+//		}
+//		if (id == "123456003") {
+//			this.orderID = id;
+//			this.userID = "123456";
+//			this.hotelID = "500003";
+//			this.price = 198;
+//			// this.entryTime = "2016/12/28";
+//			this.lastime = 2;
+//			this.orderState = OrderState.UNFINISHED;
+//			this.roomType = RoomType.singlePersonRoom;
+//			this.roomNum = 1;
+//
+//		}
+//		if (id == "123456004") {
+//			this.orderID = id;
+//			this.userID = "123456";
+//			this.hotelID = "500004";
+//			this.price = 198;
+//			// this.entryTime = "2016/7/13";
+//			this.lastime = 2;
+//			this.orderState = OrderState.ABNOMAL;
+//			this.roomType = RoomType.multiPersonRoom;
+//			this.roomNum = 1;
+//
+//		}
+//
+//	}
 
 	// 表格服务方法
-	public StringProperty getOrderIDProperty() {
-		return new SimpleStringProperty(this.orderID);
-	}
-
-	public StringProperty getPriceProperty() {
-		return new SimpleStringProperty(String.valueOf(this.price));
-	}
-
-	public StringProperty getOrderStateProperty() {
-		if (this.orderState.equals(OrderState.ABNOMAL)) {
-			return new SimpleStringProperty("异常");
-		}
-		if (this.orderState.equals(OrderState.FINISHED)) {
-			return new SimpleStringProperty("已执行");
-		}
-		if (this.orderState.equals(OrderState.UNFINISHED)) {
-			return new SimpleStringProperty("待执行");
-		}
-		return null;
-	}
-
-	public StringProperty getEntryTimeProperty() {
-		return new SimpleStringProperty(this.entryTime.toString());
-	}
+//	public StringProperty getOrderIDProperty() {
+//		return new SimpleStringProperty(this.orderID);
+//	}
+//
+//	public StringProperty getPriceProperty() {
+//		return new SimpleStringProperty(String.valueOf(this.price));
+//	}
+//
+//	public StringProperty getOrderStateProperty() {
+//		if (this.orderState.equals(OrderState.ABNOMAL)) {
+//			return new SimpleStringProperty("异常");
+//		}
+//		if (this.orderState.equals(OrderState.FINISHED)) {
+//			return new SimpleStringProperty("已执行");
+//		}
+//		if (this.orderState.equals(OrderState.UNFINISHED)) {
+//			return new SimpleStringProperty("待执行");
+//		}
+//		return null;
+//	}
+//
+//	public StringProperty getEntryTimeProperty() {
+//		return new SimpleStringProperty(this.entryTime.toString());
+//	}
 }

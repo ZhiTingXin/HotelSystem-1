@@ -9,7 +9,7 @@ import PO.Label;
 import PO.Rank;
 import VO.HotelInfoVO;
 
-public class MockHotelInfo extends HotelInfoVO {
+//public class MockHotelInfo extends HotelInfoVO {
 //	String[] orderListId;
 //	String hotelID;
 //	String hotelName;
@@ -36,4 +36,4 @@ public class MockHotelInfo extends HotelInfoVO {
 //	public String getHotelId(){
 //		return this.hotelID;
 //	}
-}
+//}

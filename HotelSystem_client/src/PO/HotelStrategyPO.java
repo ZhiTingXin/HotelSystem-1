@@ -1,5 +1,7 @@
 package PO;
 
+import VO.HotelStrategyVO;
+
 public class HotelStrategyPO {
 	private String id;
 	private String hotelStrategyInfo;
@@ -16,6 +18,11 @@ public class HotelStrategyPO {
 		this.hotelStrategyInfo = hotelStrategyInfo;
 		this.hotelID = hotelID;
 	}
+	
+	public HotelStrategyPO(HotelStrategyVO hotelStrategyVO){
+	
+	}
+	
 	public String getId() {
 		return id;
 	}

@@ -2,13 +2,12 @@ package VO;
 
 import java.util.ArrayList;
 
-import PO.HotelInfoPO;
+import PO.HotelPO;
 import PO.HotelStrategyPO;
 import PO.Label;
 import PO.Rank;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import other.RoomType;
+//import javafx.beans.property.SimpleStringProperty;
+//import javafx.beans.property.StringProperty;
 
 public class HotelInfoVO {
 	String hotelID;
@@ -105,7 +104,9 @@ public class HotelInfoVO {
 	}
 
 	// 构造方法
-	public HotelInfoVO(HotelInfoPO hotelInfo) {
+	
+	//*********used
+	public HotelInfoVO(HotelPO hotelInfo) {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -206,15 +207,15 @@ public class HotelInfoVO {
 	}
 
 	// 界面表格方法
-	public StringProperty getHotelNameProperty() {
-		return new SimpleStringProperty(this.hotelName);
-	}
-
-	public StringProperty getHotelAddressProperty() {
-		return new SimpleStringProperty(this.hotelAddress);
-	}
-
-	public StringProperty getHotelDiscriptionProperty() {
-		return new SimpleStringProperty(this.hotelDiscription);
-	}
+//	public StringProperty getHotelNameProperty() {
+//		return new SimpleStringProperty(this.hotelName);
+//	}
+//
+//	public StringProperty getHotelAddressProperty() {
+//		return new SimpleStringProperty(this.hotelAddress);
+//	}
+//
+//	public StringProperty getHotelDiscriptionProperty() {
+//		return new SimpleStringProperty(this.hotelDiscription);
+//	}
 }

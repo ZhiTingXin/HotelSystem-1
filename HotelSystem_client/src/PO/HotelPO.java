@@ -14,14 +14,6 @@ public class HotelPO {
 	private String hotelName;
 	
 	//Hotel的构造方法
-	public HotelPO(){}
-	
-	public HotelPO(HotelInfoVO hotelInfoVO){
-		this.hotelId = hotelInfoVO.getHotelID();
-		this.hotelStaffId = hotelInfoVO.getHotelStaffId();
-		this.hotelStrict = hotelInfoVO.getHotelDistrict();
-		this.hotelName = hotelInfoVO.getHotelName();
-	}
 	public HotelPO(String hid,String hsid,String hstri,String hotelname){
 		super();
 		this.hotelId = hid;
@@ -30,7 +22,15 @@ public class HotelPO {
 		this.hotelName = hotelname;
 	}
 	
-
+	//VO > PO structure
+	public HotelPO(HotelInfoVO hotelInfoVO){
+		this.hotelId = hotelInfoVO.getHotelID();
+		this.hotelStaffId = hotelInfoVO.getHotelStaffId();
+		this.hotelStrict = hotelInfoVO.getHotelDistrict();
+		this.hotelName = hotelInfoVO.getHotelName();
+	}
+	
+	
 	public String getHotelId() {
 		return hotelId;
 	}

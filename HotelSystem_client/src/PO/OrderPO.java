@@ -2,6 +2,7 @@ package PO;
 
 import java.util.Date;
 
+import VO.OrderVO;
 import other.OrderState;
 
 public class OrderPO {
@@ -13,7 +14,7 @@ public class OrderPO {
 	private Date entryTime;
 	private Date lastTime;
 	private String orderInfo;
-	private int price;
+	private double price;
 	
 	//构造方法
 	public OrderPO(){}
@@ -28,6 +29,19 @@ public class OrderPO {
 		this.orderInfo = info;
 		this.lastTime =last;
 	}
+	
+	
+	//structer vo >po
+	public OrderPO(OrderVO orderVO){
+		id = orderVO.getOrderID();
+		hotelId = orderVO.getHotelID();
+		userId = orderVO.getUserID();
+		entryTime = orderVO.getEntryTime();
+		status = orderVO.getOrderState();
+		price = orderVO.getPrice();
+		lastTime = orderVO.getLastime();
+	}
+	
 	public String getId() {
 		return id;
 	}
@@ -70,7 +84,7 @@ public class OrderPO {
 	public void setOrderInfo(String orderInfo) {
 		this.orderInfo = orderInfo;
 	}
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	public void setPrice(int price) {
